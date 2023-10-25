@@ -8,7 +8,7 @@ class CampaignSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class SubsciberSerializer(serializers.ModelSerializer):
+class SubscriberSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subscriber
         fields = '__all__'

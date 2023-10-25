@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from campaigns.views import SubscribeToCampaignAPIView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/campaigns/", include("campaigns.urls"))
+    path("api/campaigns/", include("campaigns.urls")),
+    path("api/subscribe/", SubscribeToCampaignAPIView.as_view(), name="")
 ]
